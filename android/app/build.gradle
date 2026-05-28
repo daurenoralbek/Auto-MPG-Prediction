@@ -1,0 +1,32 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.jihc.teamup'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.jihc.teamup'
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName '1.0.0'
+        multiDexEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation 'androidx.multidex:multidex:2.0.1'
+}
